@@ -12,6 +12,8 @@
 		03A4592F21766115007D4EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A4592D21766115007D4EF0 /* Main.storyboard */; };
 		03A4593121766116007D4EF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A4593021766116007D4EF0 /* Assets.xcassets */; };
 		03A4593421766116007D4EF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A4593221766116007D4EF0 /* LaunchScreen.storyboard */; };
+		03A4593E21767A72007D4EF0 /* ViewControllerRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A4593D21767A72007D4EF0 /* ViewControllerRegistro.swift */; };
+		03A459402176A64A007D4EF0 /* ViewControllerStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A4593F2176A64A007D4EF0 /* ViewControllerStepper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		03A4593021766116007D4EF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03A4593321766116007D4EF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03A4593521766116007D4EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03A4593D21767A72007D4EF0 /* ViewControllerRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegistro.swift; sourceTree = "<group>"; };
+		03A4593F2176A64A007D4EF0 /* ViewControllerStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStepper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				03A4593021766116007D4EF0 /* Assets.xcassets */,
 				03A4593221766116007D4EF0 /* LaunchScreen.storyboard */,
 				03A4593521766116007D4EF0 /* Info.plist */,
+				03A4593D21767A72007D4EF0 /* ViewControllerRegistro.swift */,
+				03A4593F2176A64A007D4EF0 /* ViewControllerStepper.swift */,
 			);
 			path = "Applica-T";
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A459402176A64A007D4EF0 /* ViewControllerStepper.swift in Sources */,
 				03A4592C21766114007D4EF0 /* ViewController.swift in Sources */,
+				03A4593E21767A72007D4EF0 /* ViewControllerRegistro.swift in Sources */,
 				03A4592A21766114007D4EF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.unam.Applica-T";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.unam.Applica-T";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
