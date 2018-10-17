@@ -92,7 +92,7 @@
         <!--Bienvenido, usuario-->
         <scene sceneID="N6s-sL-PAW">
             <objects>
-                <viewController id="9NJ-Fb-h1g" sceneMemberID="viewController">
+                <viewController id="9NJ-Fb-h1g" customClass="ViewControllerRecomendaciones" customModule="Applica_T" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JmZ-oT-E1E">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,7 +129,7 @@
                                                                                 </constraints>
                                                                                 <state key="normal" title="Button" image="auditoria"/>
                                                                                 <connections>
-                                                                                    <segue destination="ta1-oW-RTr" kind="show" id="gFW-nv-PlC"/>
+                                                                                    <segue destination="ta1-oW-RTr" kind="show" id="asT-Qe-Wfa"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auditoría" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o90-n4-Fkr">
@@ -241,7 +241,7 @@
                                                                                     <constraint firstAttribute="height" constant="90" id="WXW-Ox-e7C"/>
                                                                                     <constraint firstAttribute="width" constant="90" id="tbC-nR-c2l"/>
                                                                                 </constraints>
-                                                                                <state key="normal" title="Button" image="investigacion"/>
+                                                                                <state key="normal" title="Button" image="ItunesArtwork"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redacción" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBD-V9-YCS">
                                                                                 <rect key="frame" x="0.0" y="100" width="90" height="20.5"/>
@@ -291,10 +291,13 @@
                     <navigationItem key="navigationItem" title="Bienvenido, usuario" id="We5-sV-XYj">
                         <barButtonItem key="backBarButtonItem" title="Atrás" id="EG8-am-kSh"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="botonRecomendaciones" destination="DgS-7w-YrB" id="LQe-eg-HgT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDI-M9-8fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="1165"/>
+            <point key="canvasLocation" x="1680" y="1210"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="k0d-aU-ROl">
@@ -311,10 +314,10 @@
             </objects>
             <point key="canvasLocation" x="1681" y="1891"/>
         </scene>
-        <!--Auditoría-->
+        <!--Auditoría Informática-->
         <scene sceneID="U38-0s-TGm">
             <objects>
-                <viewController id="ta1-oW-RTr" sceneMemberID="viewController">
+                <viewController id="ta1-oW-RTr" customClass="ViewControllerTemas" customModule="Applica_T" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CMI-uC-BzR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,14 +328,149 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hd-HH-zqj">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="auditoria" translatesAutoresizingMaskIntoConstraints="NO" id="Rp3-EE-7wp">
-                                                <rect key="frame" x="95" y="32" width="130" height="130"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="acg-9h-OF8">
+                                                <rect key="frame" x="20" y="30" width="280" height="392"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auditoria" translatesAutoresizingMaskIntoConstraints="NO" id="Rp3-EE-7wp">
+                                                        <rect key="frame" x="27.5" y="0.0" width="225" height="225"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esta es una breve descripción de auditoría. Está genial el plan. Saludos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z3-KR-i2m">
+                                                        <rect key="frame" x="0.0" y="225" width="280" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="280" id="ZGI-ch-TgA"/>
+                                                            <constraint firstAttribute="height" constant="95" id="xAd-6w-1ar"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YuW-oH-EZv">
+                                                        <rect key="frame" x="0.0" y="320" width="280" height="36"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0it-JQ-95g">
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="36"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <state key="normal" title="Control Interno">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="pushedTema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="dqj-lF-cuQ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgR-0B-eZU">
+                                                                <rect key="frame" x="0.0" y="-414" width="280" height="0.0"/>
+                                                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Metodologías">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="pushedSubtema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="LgP-hR-JVq"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRO-iD-B2l">
+                                                                <rect key="frame" x="0.0" y="-414" width="280" height="0.0"/>
+                                                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Evaluación">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="pushedSubtema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="e1v-wP-Ye3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKT-qg-zrT">
+                                                                <rect key="frame" x="0.0" y="-414" width="280" height="0.0"/>
+                                                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Calidad">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="pushedSubtema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="tDr-hj-qd0"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aku-V9-nEB">
+                                                                <rect key="frame" x="0.0" y="-414" width="280" height="0.0"/>
+                                                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Casos Prácticos">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="pushedSubtema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="Me9-JY-9Il"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IIK-Qk-97b">
+                                                        <rect key="frame" x="0.0" y="356" width="280" height="36"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWV-zf-ssh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="36"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <state key="normal" title="Auditoría Externa">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="pushedSecondTema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="PLB-QJ-IGz"/>
+                                                                    <action selector="pushedTema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="opK-EG-cY2"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoO-rg-ct5">
+                                                                <rect key="frame" x="0.0" y="-450" width="280" height="0.0"/>
+                                                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Metodologías">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="pushedSubtema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="aMS-gP-YzD"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8J-sN-97T">
+                                                                <rect key="frame" x="0.0" y="-450" width="280" height="0.0"/>
+                                                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Evaluación">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="pushedSubtema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="BK4-jN-d14"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L79-Om-Lov">
+                                                                <rect key="frame" x="0.0" y="-450" width="280" height="0.0"/>
+                                                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Calidad">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="pushedSubtema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="Dso-aI-qr0"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-yg-UZC">
+                                                                <rect key="frame" x="0.0" y="-450" width="280" height="0.0"/>
+                                                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Casos Prácticos">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="pushedSubtema:" destination="ta1-oW-RTr" eventType="touchUpInside" id="QRI-93-oSz"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="YuW-oH-EZv" firstAttribute="leading" secondItem="acg-9h-OF8" secondAttribute="leading" id="4qa-rO-nxC"/>
+                                                    <constraint firstItem="IIK-Qk-97b" firstAttribute="leading" secondItem="acg-9h-OF8" secondAttribute="leading" id="IVR-1u-xWD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IIK-Qk-97b" secondAttribute="trailing" id="KBx-EG-yKn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YuW-oH-EZv" secondAttribute="trailing" id="vkf-ek-oUT"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1000" id="FUD-CD-L2v"/>
+                                            <constraint firstItem="acg-9h-OF8" firstAttribute="top" secondItem="2hd-HH-zqj" secondAttribute="top" constant="30" id="UX6-lU-qfc"/>
+                                            <constraint firstItem="acg-9h-OF8" firstAttribute="centerX" secondItem="2hd-HH-zqj" secondAttribute="centerX" id="VV2-VS-jsX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -354,12 +492,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ieQ-mN-b26"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Auditoría" id="Kyb-lw-jig"/>
+                    <navigationItem key="navigationItem" title="Auditoría Informática" id="Kyb-lw-jig"/>
                     <size key="freeformSize" width="320" height="1000"/>
+                    <connections>
+                        <outletCollection property="subtemasButtons" destination="KRO-iD-B2l" collectionClass="NSMutableArray" id="M0y-Y9-CYV"/>
+                        <outletCollection property="subtemasButtons" destination="kgR-0B-eZU" collectionClass="NSMutableArray" id="WX9-Qf-LTL"/>
+                        <outletCollection property="subtemasButtons" destination="FKT-qg-zrT" collectionClass="NSMutableArray" id="8MT-FD-gjE"/>
+                        <outletCollection property="subtemasButtons" destination="aku-V9-nEB" collectionClass="NSMutableArray" id="wtU-Dh-Ce7"/>
+                        <outletCollection property="subtemasSecondButtons" destination="CoO-rg-ct5" collectionClass="NSMutableArray" id="8we-Ei-NJT"/>
+                        <outletCollection property="subtemasSecondButtons" destination="A8J-sN-97T" collectionClass="NSMutableArray" id="tEm-Qa-b7s"/>
+                        <outletCollection property="subtemasSecondButtons" destination="L79-Om-Lov" collectionClass="NSMutableArray" id="rkA-Ta-d7v"/>
+                        <outletCollection property="subtemasSecondButtons" destination="3hi-yg-UZC" collectionClass="NSMutableArray" id="lak-Wc-rho"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m2c-Bi-4sv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2426.25" y="1165"/>
+            <point key="canvasLocation" x="2497.5" y="1210"/>
         </scene>
         <!--Número-->
         <scene sceneID="GQI-k2-BbK">
@@ -415,7 +563,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qph-At-54j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3251.25" y="1300"/>
+            <point key="canvasLocation" x="3324" y="1015"/>
         </scene>
         <!--Tamaño-->
         <scene sceneID="4F9-ZL-WFe">
@@ -521,7 +669,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDT-1Q-dpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3915" y="1052.5"/>
+            <point key="canvasLocation" x="4069" y="1016"/>
         </scene>
         <!--View Controller Registro-->
         <scene sceneID="DY4-fZ-aqe">
@@ -697,7 +845,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9A-Hu-Eyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="-58"/>
+            <point key="canvasLocation" x="1680" y="160"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xFS-nk-b3h">
@@ -715,19 +863,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fL-E5-Arf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682.5" y="1165"/>
+            <point key="canvasLocation" x="683" y="1210"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ItunesArtwork" width="512" height="512"/>
         <image name="ItunesLightArtwork" width="512" height="512"/>
         <image name="auditoria" width="225" height="225"/>
         <image name="control" width="256" height="256"/>
         <image name="costos" width="256" height="256"/>
-        <image name="investigacion" width="512" height="512"/>
         <image name="moviles" width="225" height="225"/>
         <image name="seguridad" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g3Z-Nx-Cr1"/>
+        <segue reference="lQz-2z-2Bi"/>
     </inferredMetricsTieBreakers>
 </document>
