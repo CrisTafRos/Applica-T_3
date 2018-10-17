@@ -13,7 +13,7 @@ class ViewControllerRegistro: UIViewController, UIPickerViewDataSource, UIPicker
     let carreras = ["Administración", "Contaduría", "Informática", "Negocios Internacionales"]
     
     @IBOutlet weak var licenciaturasFca: UIPickerView!
-    
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

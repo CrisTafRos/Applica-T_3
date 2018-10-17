@@ -1,5 +1,5 @@
 //
-//  ViewControllerStepper.swift
+//  ViewControllerCircleButtons.swift
 //  Applica-T
 //
 //  Created by Laboratorio UNAM-Apple 24 on 16/10/18.
@@ -8,29 +8,31 @@
 
 import UIKit
 
-class ViewControllerStepper: UIViewController {
+class ViewControllerCircleButtons: UIViewController {
     
-    var countPizza : Int = 1
-    
-    @IBOutlet weak var numeroPizzas: UILabel!
-    
-    @IBOutlet weak var stepperPizzas: UIStepper!
-    
-    @IBAction func stepperPizzas(_ sender: UIStepper) {
-        countPizza = Int(sender.value)
-        numeroPizzas.text = String(Int(stepperPizzas.value))
-    }
+    @IBOutlet weak var buttonChica: UIButton!
+    @IBOutlet weak var buttonMediana: UIButton!
+    @IBOutlet weak var buttonGrande: UIButton!
+    @IBOutlet weak var buttonFamiliar: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.applyRoundCorner(buttonChica)
+        self.applyRoundCorner(buttonMediana)
+        self.applyRoundCorner(buttonGrande)
+        self.applyRoundCorner(buttonFamiliar)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func applyRoundCorner (_ object: AnyObject){
+        object.layer.cornerRadius = object.frame.size.width / 2
+        object.layer.masksToBounds = true
     }
     
 

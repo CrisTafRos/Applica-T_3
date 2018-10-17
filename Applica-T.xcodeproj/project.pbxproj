@@ -14,6 +14,7 @@
 		03A4593421766116007D4EF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A4593221766116007D4EF0 /* LaunchScreen.storyboard */; };
 		03A4593E21767A72007D4EF0 /* ViewControllerRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A4593D21767A72007D4EF0 /* ViewControllerRegistro.swift */; };
 		03A459402176A64A007D4EF0 /* ViewControllerStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A4593F2176A64A007D4EF0 /* ViewControllerStepper.swift */; };
+		03A459422176ACBE007D4EF0 /* ViewControllerCircleButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A459412176ACBE007D4EF0 /* ViewControllerCircleButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		03A4593521766116007D4EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03A4593D21767A72007D4EF0 /* ViewControllerRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegistro.swift; sourceTree = "<group>"; };
 		03A4593F2176A64A007D4EF0 /* ViewControllerStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStepper.swift; sourceTree = "<group>"; };
+		03A459412176ACBE007D4EF0 /* ViewControllerCircleButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCircleButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				03A4593521766116007D4EF0 /* Info.plist */,
 				03A4593D21767A72007D4EF0 /* ViewControllerRegistro.swift */,
 				03A4593F2176A64A007D4EF0 /* ViewControllerStepper.swift */,
+				03A459412176ACBE007D4EF0 /* ViewControllerCircleButtons.swift */,
 			);
 			path = "Applica-T";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				03A459402176A64A007D4EF0 /* ViewControllerStepper.swift in Sources */,
 				03A4592C21766114007D4EF0 /* ViewController.swift in Sources */,
+				03A459422176ACBE007D4EF0 /* ViewControllerCircleButtons.swift in Sources */,
 				03A4593E21767A72007D4EF0 /* ViewControllerRegistro.swift in Sources */,
 				03A4592A21766114007D4EF0 /* AppDelegate.swift in Sources */,
 			);
